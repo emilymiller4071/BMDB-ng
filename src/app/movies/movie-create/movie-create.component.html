@@ -1,0 +1,44 @@
+<body>
+
+    <app-menu></app-menu>
+   
+    <div class="trans-box-container">
+       
+        <div class="trans-box">
+
+            <h3>Enter New Movie Details:</h3>
+            <div class="form-container">
+
+                <div class="form-group">
+
+                    <label for="title">Movie Title: </label>
+                    <input [(ngModel)]="movie.title" type="text" name="title" placeholder="enter title">
+                </div>    
+
+                <div class="form-group">
+                    <label for="year">Year: </label>
+                    <input [(ngModel)]="movie.year" type="number" name="year" [placeholder]="yearPlaceholder">
+                </div> 
+                
+                <div class="form-group">    
+                    <label for="rating">Movie Rating: </label>
+                    <input [(ngModel)]="movie.rating" type="text" name="rating" placeholder="enter rating">
+                </div>
+                
+                <div class="form-group">
+                    <label for="director">Movie Director: </label>
+                    <input [(ngModel)]="movie.director" type="text" name="director" placeholder="enter director">
+                </div>
+
+                <div class="button-container">    
+                    <button (click)="create()">Save</button>
+                    <button routerLink="/movies/list">Cancel</button>
+                </div>
+
+            </div>
+
+        </div>
+    
+    </div>
+
+</body>

@@ -17,7 +17,7 @@ export class MovieListComponent implements OnInit{
     // subscribe to the list of movies we get from the get request
     this.movieService.getAll().subscribe(jsonResponse => {
       // add the data inside the returned jsonResponse to the array of movies
-      this.movies = jsonResponse as Movie[];
+      this.movies = jsonResponse.sort((a, b) => a.title.localeCompare(b.title));
     })
   }
 

@@ -1,0 +1,84 @@
+
+body {
+    min-height: 100vh;
+    background-color: rgba(127, 255, 212, 0.462);
+    margin: 0; /* Remove default margin to fill the entire viewport */
+    padding: 0; /* Remove default padding */
+}
+
+table.table-striped {
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 60px 60px 0 0; /* Adjust the radius to control the roundness */
+}
+
+.header {
+    background-color: transparent; /* Make the header background transparent */
+    text-align: center; /* Center header content if needed */
+    padding: 20px; /* Add padding to header if needed */
+}
+
+
+.create{
+    display: inline-block;
+    outline: 0;
+    border:0;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    color: #000;
+    background: rgba(237, 199, 30, 0.372);
+    line-height: 25px;
+    border-radius: 40px;
+    padding: 10px;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    box-shadow: rgb(255, 198, 0) -2px -2px 0px 2px, rgb(246, 84, 174) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
+    transition: all 0.2s;
+}
+.create:hover{
+    box-shadow: rgb(246, 84, 174) -2px -2px 0px 2px, rgba(216, 131, 249, 0.923) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
+    transform: scale(1.01);
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: rgba(232, 38, 219, 0.338);
+    }
+
+.table-striped>tbody>tr:nth-child(even)>td, 
+.table-striped>tbody>tr:nth-child(even)>th {
+    background-color: rgba(232, 38, 219, 0.501);
+}
+
+th {
+    background-color: rgba(255, 200, 0, 0.435);
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+}
+
+th.button-header {
+    width: 100px;
+    text-align: right;
+}
+
+
+.list-button {
+	border: none;
+	outline: none;
+	padding: 10px 5px;
+	border-radius: 50px;
+	color: #333;
+	background: rgba(127, 255, 212, 0.637);
+	box-shadow: 0 3px 20px 0 #0000003b;
+    width: 100px;
+    font-size: small;
+}
+button:hover{
+	cursor: pointer;
+    background-color: rgba(127, 255, 212, 0.795);
+}

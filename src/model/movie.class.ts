@@ -1,17 +1,19 @@
 export class Movie {
-    id: number;
+    id?: number;
     title: string;
-    year: number;
+    year?: number;
     rating: string;
     director: string;
+    imageUrl?: string;
 
-    constructor(id: number = 0, title: string = "", year: number = 0, rating: string = "",
+    constructor(id?: number, title: string = "", year?: number, rating: string = "", imageUrl?: string,
     director: string = "") {
         this.id = id;
         this.title = title;
         this.year = year;
         this.rating = rating;
         this.director = director;
+        this.imageUrl = imageUrl;
     }
 
 }
