@@ -1,0 +1,41 @@
+
+  <h5 class="card-title">{{ pageTitle }}</h5>
+
+        <!-- <a routerLink="/user/create">
+            <button>+ NEW USER</button>   
+          </a>  -->
+
+        <table class="table">  
+            <thead>
+
+                <tr>
+                    <th >Movie Title</th>
+                    <th>Year</th>
+                    <th>Rating</th>
+                    <th>Director</th>
+                </tr> 
+
+            </thead>
+
+            <tbody>
+
+                <tr *ngFor="let movie of movies">
+                <td>{{ movie.title }}</td>
+                <td>{{ movie.year }}</td>
+                <td>{{ movie.rating}}</td>
+                <td>{{ movie.director}}</td>
+                
+                <!-- <td> 
+                    <a routerLink="/user/detail/{{ user.id }}">
+                    <img class="icon" src="../../../assets/detail.png"></a>
+                </td>
+
+                <td>
+                    <a routerLink="/user/edit/{{ user.id }}">
+                        <img class="icon" src="../../../assets/edit.png"></a>
+                </td> -->
+                </tr>
+
+            </tbody>
+        </table> 
+  
