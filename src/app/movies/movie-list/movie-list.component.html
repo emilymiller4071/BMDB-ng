@@ -7,49 +7,54 @@
             <button class="create">+ ADD A MOVIE</button>   
           </a> 
 
+        <div class="table-container">
 
-        <table class="table-striped">  
-            <thead>
+          
+            <table class="table-striped">  
+                <thead>
 
-                <tr>
-                    <th >Movie Title</th>
-                    <th>Year</th>
-                    <th>Rating</th>
-                    <th>Director</th>
-                    <th class="button-header"></th>
-                    <th class="button-header"></th>
-                </tr> 
+                    <tr>
+                        <th >Movie Title</th>
+                        <th>Year</th>
+                        <th>Rating</th>
+                        <th>Director</th>
+                        <th class="button-header"></th>
+                        <th class="button-header"></th>
+                    </tr> 
 
-            </thead>
+                </thead>
 
-            <tbody>
+                <tbody>
 
-                <tr *ngFor="let movie of movies">
-                <td>{{ movie.title }}</td>
-                <td>{{ movie.year }}</td>
-                <td>{{ movie.rating}}</td>
-                <td>{{ movie.director}}</td>
-                <td><a routerLink="/movie/detail/{{ movie.id }}">
-                    <button class="list-button">Movie Details</button></a>
-                </td>
+                    <tr *ngFor="let movie of movies">
+                    <td>{{ movie.title }}</td>
+                    <td>{{ movie.year }}</td>
+                    <td>{{ movie.rating}}</td>
+                    <td>{{ movie.director}}</td>
+                    <td><a routerLink="/movies/{{movie.id}}">
+                        <button class="list-button">Movie Details</button></a>
+                    </td>
 
-                <td>
-                    <a routerLink="/movie/edit/{{ movie.id }}">
-                        <button class="list-button">Edit Movie</button></a>
-                </td>
-                
-                <!-- <td> 
-                    <a routerLink="/user/detail/{{ user.id }}">
-                    <img class="icon" src="../../../assets/detail.png"></a>
-                </td>
+                    
 
-                <td>
-                    <a routerLink="/user/edit/{{ user.id }}">
-                        <img class="icon" src="../../../assets/edit.png"></a>
-                </td> -->
-                </tr>
+                    <td>
+                        <a routerLink="/movies/edit/{{ movie.id }}">
+                            <button class="list-button">Edit Movie</button></a>
+                    </td>
+                    
+                    <!-- <td> 
+                        <a routerLink="/user/detail/{{ user.id }}">
+                        <img class="icon" src="../../../assets/detail.png"></a>
+                    </td>
 
-            </tbody>
-        </table> 
-       
+                    <td>
+                        <a routerLink="/user/edit/{{ user.id }}">
+                            <img class="icon" src="../../../assets/edit.png"></a>
+                    </td> -->
+                    </tr>
+
+                </tbody>
+            </table> 
+
+        </div>
   </body>

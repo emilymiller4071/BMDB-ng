@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MovieService } from 'src/app/service/movie.service';
 import { Movie } from 'src/model/movie.class';
-import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie-create',

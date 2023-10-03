@@ -1,15 +1,15 @@
 
 body {
-    min-height: 100vh;
     background-color: rgba(127, 255, 212, 0.462);
     margin: 0; /* Remove default margin to fill the entire viewport */
     padding: 0; /* Remove default padding */
+    overflow-y: scroll;
 }
+
 
 table.table-striped {
     border-collapse: separate;
     border-spacing: 0;
-    overflow: hidden;
     border-radius: 60px 60px 0 0; /* Adjust the radius to control the roundness */
 }
 
@@ -54,7 +54,7 @@ table.table-striped {
 }
 
 th {
-    background-color: rgba(255, 200, 0, 0.435);
+    background-color: rgb(255, 200, 0);
     border: none;
     border-collapse: separate;
     border-spacing: 0;

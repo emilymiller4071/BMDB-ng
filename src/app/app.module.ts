@@ -12,6 +12,7 @@ import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { MovieDetailComponent } from './movies/movie-detail/movie-detail.component';
+import { MovieEditComponent } from './movies/movie-edit/movie-edit.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { MovieDetailComponent } from './movies/movie-detail/movie-detail.compone
     MovieCreateComponent,
     MenuComponent,
     HomeComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    MovieEditComponent
   ],
   imports: [
     BrowserModule,

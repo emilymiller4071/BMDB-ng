@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MovieService } from 'src/app/service/movie.service';
 import { Movie } from 'src/model/movie.class';
 
@@ -8,10 +9,16 @@ import { Movie } from 'src/model/movie.class';
   styleUrls: ['./movie-list.component.css']
 })
 export class MovieListComponent implements OnInit{
+
+
   pageTitle: string = "Movie List"
   movies: Movie[] = [];
+  selectedMovie: Movie | null = null;
+  id: any;
 
-  constructor(private movieService: MovieService) {
+  constructor(private movieService: MovieService,
+    private route: ActivatedRoute,
+    private router: Router) {
   }
   ngOnInit() {
     // subscribe to the list of movies we get from the get request
@@ -20,7 +27,6 @@ export class MovieListComponent implements OnInit{
       this.movies = jsonResponse.sort((a, b) => a.title.localeCompare(b.title));
     })
   }
+  
+  }
 
-
-
-}
