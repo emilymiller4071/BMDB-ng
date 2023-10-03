@@ -4,7 +4,7 @@
     <div class="flex-container">
        
         <div class="photo-container">
-                <img [src]="'../../assets/' + movie.title + '.jpg'">
+                <img [src]="getMovieImageSource()">
         </div>
 
 
@@ -20,9 +20,12 @@
                         <p>Director : {{movie.director}}</p>
                         
                     <div class="button-wrap">    
-                        <button type="button">Edit</button>
-                        <button type="button">Delete</button>
-                        <button type="button">Credits</button> 
+                        <a routerLink="/movies/edit/{{ movie.id }}">
+                            <button type="button">Edit</button>
+                        </a>    
+                        
+                        <a><button type="button" (click)="delete()">Delete</button></a>
+                        <a><button type="button">Credits</button></a> 
                     </div>    
 
                     </section>

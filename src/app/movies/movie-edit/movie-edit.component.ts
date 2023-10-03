@@ -23,4 +23,20 @@ export class MovieEditComponent implements OnInit{
       this.movieService.getById(this.id).subscribe(jsonResponse =>
         this.movie = jsonResponse as Movie);
     }
+
+    update() {
+      this.movieService.update(this.movie).subscribe(
+        (updatedMovie: Movie) => {
+          // Update the local movie object with the new values returned from the server
+          this.movie = updatedMovie;
+          // Redirect to movie detail page with updated movie object
+          this.router.navigate([`/movies/${this.movie.id}`]);
+        }
+      );
+    }
+
+    delete() {
+      this.movieService.delete(this.id).subscribe( jsonResponse =>
+        this.router.navigateByUrl('movies/list'));
+    }
 }

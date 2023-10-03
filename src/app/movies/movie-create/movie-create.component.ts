@@ -27,8 +27,8 @@ export class MovieCreateComponent {
       // Convert rating to uppercase
       this.movie.rating = this.movie.rating.toUpperCase();
 
-      if (!this.movie.imageUrl) {
-        this.movie.imageUrl = '/assets/default.jpg'; // Update with your default image path
+      if (this.movie.imageUrl === null) {
+        this.movie.imageUrl = this.movie.imageUrl || '../../assets/default.jpg';
       }
   
       // Call the movieService to create the movie

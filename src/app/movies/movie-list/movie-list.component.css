@@ -50,11 +50,11 @@ table.table-striped {
 
 .table-striped>tbody>tr:nth-child(even)>td, 
 .table-striped>tbody>tr:nth-child(even)>th {
-    background-color: rgba(232, 38, 219, 0.501);
+    background-color: rgba(209, 38, 232, 0.501);
 }
 
 th {
-    background-color: rgb(255, 200, 0);
+    background-color: rgba(143, 11, 195, 0.699);
     border: none;
     border-collapse: separate;
     border-spacing: 0;

@@ -105,11 +105,16 @@ img {
     flex-direction: row;
 }
 
-.button-wrap > button {
-    background-color: rgba(255, 160, 122, 0.575);
+a {
+    text-decoration: none;
 }
 
-.button-wrap > button:hover {
+a > button {
+    background-color: rgba(255, 160, 122, 0.575);
+    width: 125px;
+}
+
+a > button:hover {
     cursor: pointer;
     background-color: rgba(255, 160, 122, 0.791);
 }

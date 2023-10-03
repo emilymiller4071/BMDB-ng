@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { MovieDetailComponent } from './movies/movie-detail/movie-detail.component';
 import { MovieEditComponent } from './movies/movie-edit/movie-edit.component';
+import { ActorListComponent } from './actors/actor-list/actor-list.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { MovieEditComponent } from './movies/movie-edit/movie-edit.component';
     MenuComponent,
     HomeComponent,
     MovieDetailComponent,
-    MovieEditComponent
+    MovieEditComponent,
+    ActorListComponent
   ],
   imports: [
     BrowserModule,

@@ -48,7 +48,7 @@ button {
 	background: rgba(127, 255, 212, 0.637);
 	margin-bottom: 50px;
 	box-shadow: 0 3px 20px 0 #0000003b;
-    width: 150px;
+    width: 125px;
 }
 button:hover{
 	cursor: pointer;
