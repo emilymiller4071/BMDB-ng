@@ -1,1 +1,49 @@
-<p>actor-list works!</p>
+<body>
+    <app-menu></app-menu>
+    
+        
+    
+            <a routerLink="/movies/create">
+                <button class="create">+ ADD ACTOR</button>   
+              </a> 
+    
+            <div class="table-container">
+    
+              
+                <table class="table-striped">  
+                    <thead>
+    
+                        <tr>
+                            <th >Actor Name</th>
+                            <th>Gender</th>
+                            <th>Birthdate</th>
+                            <th class="button-header"></th>
+                            <th class="button-header"></th>
+                        </tr> 
+    
+                    </thead>
+    
+                    <tbody>
+    
+                        <tr *ngFor="let actor of actors">
+                        <td>{{ actor.firstName }} {{actor.lastName}}</td>
+                        <td>{{ actor.gender }}</td>
+                        <td>{{ actor.birthDate}}</td>
+                        <td><a routerLink="/actors/{{actor.id}}">
+                            <button class="list-button">Actor Details</button></a>
+                        </td>
+    
+                        
+    
+                        <td>
+                            <a routerLink="/actors/edit/{{ actor.id }}">
+                                <button class="list-button">Edit Actor</button></a>
+                        </td>
+                     
+                        </tr>
+    
+                    </tbody>
+                </table> 
+    
+            </div>
+      </body>

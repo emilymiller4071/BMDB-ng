@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { MovieDetailComponent } from './movies/movie-detail/movie-detail.component';
 import { MovieEditComponent } from './movies/movie-edit/movie-edit.component';
 import { ActorListComponent } from './actors/actor-list/actor-list.component';
+import { ActorDetailComponent } from './actors/actor-detail/actor-detail.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ActorListComponent } from './actors/actor-list/actor-list.component';
     HomeComponent,
     MovieDetailComponent,
     MovieEditComponent,
-    ActorListComponent
+    ActorListComponent,
+    ActorDetailComponent
   ],
   imports: [
     BrowserModule,

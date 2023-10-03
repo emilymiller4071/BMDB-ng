@@ -32,9 +32,18 @@ constructor(private movieService: MovieService,
     const image = new Image();
     image.src = imageUrl;
   
-    if (!image.complete || typeof image.naturalWidth === 'undefined' || image.naturalWidth === 0) {
-      imageUrl = '../../assets/default.png';
-    }
+
+    image.onload = () => {
+      // Check if the image is loaded successfully
+      if (image.naturalWidth > 0) {
+        // Image loaded successfully, update the imageUrl
+        this.movie.imageUrl = imageUrl;
+      } else {
+        // Image failed to load, use the default image
+        this.movie.imageUrl = '../../assets/default.png';
+      }
+    };
+ 
   
     return imageUrl;
   }

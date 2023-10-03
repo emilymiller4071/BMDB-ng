@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ActorDetailComponent } from './actors/actor-detail/actor-detail.component';
+import { ActorListComponent } from './actors/actor-list/actor-list.component';
 import { HomeComponent } from './home/home.component';
 import { MovieCreateComponent } from './movies/movie-create/movie-create.component';
 import { MovieDetailComponent } from './movies/movie-detail/movie-detail.component';
@@ -12,7 +14,9 @@ const routes: Routes = [
   { path: 'movies/create', component: MovieCreateComponent },
   { path: 'movies/list', component: MovieListComponent },
   { path: 'movies/:id', component: MovieDetailComponent },
-  { path: 'movies/edit/:id', component: MovieEditComponent}
+  { path: 'movies/edit/:id', component: MovieEditComponent },
+  { path: 'actors/list', component: ActorListComponent },
+  { path: 'actors/:id', component: ActorDetailComponent}
 ];
 
 @NgModule({

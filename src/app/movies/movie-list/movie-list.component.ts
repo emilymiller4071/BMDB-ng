@@ -11,7 +11,7 @@ import { Movie } from 'src/model/movie.class';
 export class MovieListComponent implements OnInit{
 
 
-  pageTitle: string = "Movie List"
+  pageTitle: string = "Movie List";
   movies: Movie[] = [];
   selectedMovie: Movie | null = null;
   id: any;
