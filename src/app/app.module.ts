@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { DatePipe } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { MovieEditComponent } from './movies/movie-edit/movie-edit.component';
 import { ActorListComponent } from './actors/actor-list/actor-list.component';
 import { ActorDetailComponent } from './actors/actor-detail/actor-detail.component';
 import { ActorEditComponent } from './actors/actor-edit/actor-edit.component';
+import { ActorCreateComponent } from './actors/actor-create/actor-create.component';
 
 
 @NgModule({
@@ -29,7 +31,8 @@ import { ActorEditComponent } from './actors/actor-edit/actor-edit.component';
     MovieEditComponent,
     ActorListComponent,
     ActorDetailComponent,
-    ActorEditComponent
+    ActorEditComponent,
+    ActorCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,7 @@ import { ActorEditComponent } from './actors/actor-edit/actor-edit.component';
     NgbModule, 
     FormsModule
   ],
-  providers: [],
+  providers: [  DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

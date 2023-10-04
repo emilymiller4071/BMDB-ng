@@ -16,7 +16,7 @@
                         <strong>{{actor.firstName}} {{actor.lastName}}</strong>
                         </h3>
                         <p>Gender : {{actor.gender}}</p>
-                        <p>Birthday : {{actor.birthDate}}</p>
+                        <p>Birthday : {{ actor.birthDate | date:'MM-dd-yyyy' }}</p>
                         
                     <div class="button-wrap">    
                         <a routerLink="/actors/edit/{{ actor.id }}">

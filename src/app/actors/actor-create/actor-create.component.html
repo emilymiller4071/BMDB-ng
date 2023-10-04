@@ -1,0 +1,44 @@
+<body>
+
+    <app-menu></app-menu>
+       
+        <div class="trans-box-container">
+           
+            <div class="trans-box">
+    
+                <h3>Enter Actor Details:</h3>
+                <div class="form-container">
+    
+                    <div class="form-group">
+    
+                        <label for="firstName">First Name: </label>
+                        <input [(ngModel)]="actor.firstName" type="text" name="firstName" placeholder="enter first name">
+                    </div>    
+    
+                    <div class="form-group">
+                        <label for="lastName">Last Name: </label>
+                        <input [(ngModel)]="actor.lastName" type="text" name="lastName" placeholder="enter last name">
+                    </div> 
+                    
+                    <div class="form-group">    
+                        <label for="gender">Gender: </label>
+                        <input [(ngModel)]="actor.gender" type="text" name="gender" placeholder="enter gender">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="birthDate">Birthday: </label>
+                        <input [(ngModel)]="actor.birthDate" type="date" name="birthDate">
+                    </div>
+    
+                    <div class="button-container">    
+                        <button type="button" (click)="create()">Save</button>
+                        <button routerLink="/actors/list">Cancel</button>
+                    </div>
+    
+                </div>
+    
+            </div>
+        
+        </div>
+    
+    </body>

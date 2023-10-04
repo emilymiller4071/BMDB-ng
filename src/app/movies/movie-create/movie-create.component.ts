@@ -19,10 +19,6 @@ export class MovieCreateComponent {
     private route: ActivatedRoute) {}
 
 
-    ngOnInit(){
-      
-    }
-
     create() {
       // Convert rating to uppercase
       this.movie.rating = this.movie.rating.toUpperCase();
