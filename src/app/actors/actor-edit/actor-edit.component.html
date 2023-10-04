@@ -1,1 +1,45 @@
-<p>actor-edit works!</p>
+<body>
+
+<app-menu></app-menu>
+   
+    <div class="trans-box-container">
+       
+        <div class="trans-box">
+
+            <h3>Update Movie Details:</h3>
+            <div class="form-container">
+
+                <div class="form-group">
+
+                    <label for="firstName">First Name: </label>
+                    <input [(ngModel)]="actor.firstName" type="text" name="firstName" [placeholder]="actor.firstName">
+                </div>    
+
+                <div class="form-group">
+                    <label for="lastName">Last Name: </label>
+                    <input [(ngModel)]="actor.lastName" type="text" name="lastName" [placeholder]="actor.lastName">
+                </div> 
+                
+                <div class="form-group">    
+                    <label for="gender">Gender: </label>
+                    <input [(ngModel)]="actor.gender" type="text" name="gender" [placeholder]="actor.gender">
+                </div>
+                
+                <div class="form-group">
+                    <label for="birthDate">Birthday: </label>
+                    <input [(ngModel)]="actor.birthDate" type="date" name="director" [placeholder]="actor.birthDate">
+                </div>
+
+                <div class="button-container">    
+                    <button type="button" (click)="update()">Save</button>
+                    <button type="button" (click)="delete()">Delete</button>
+                    <button routerLink="/actors/list">Cancel</button>
+                </div>
+
+            </div>
+
+        </div>
+    
+    </div>
+
+</body>
