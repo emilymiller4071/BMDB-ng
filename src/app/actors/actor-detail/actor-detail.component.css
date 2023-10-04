@@ -75,7 +75,7 @@ button:hover {
     display: flex;
     flex: 6; /* Adjust the flex value to make it wider */
     margin-right: 250px;
-    height: 400px;
+    height: 500px;
 }
 
 .card-container,
@@ -88,7 +88,7 @@ button:hover {
 .photo-container {
     margin-left: 390px;
     margin-right: 10px; /* Add a small gap between containers */
-    height: 360px; /* Ensure that the container is at least as tall as the image */
+    height: 307px; /* Ensure that the container is at least as tall as the image */
     flex-grow: 1; /* Allow the container to grow vertically */
 }
 
@@ -116,4 +116,12 @@ a > button {
 a > button:hover {
     cursor: pointer;
     background-color: rgba(255, 160, 122, 0.791);
+}
+
+.default-image {
+    height: 300px;
+}
+
+.card large {
+    height: 500px;
 }

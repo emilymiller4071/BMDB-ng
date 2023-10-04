@@ -15,6 +15,7 @@ import { MovieDetailComponent } from './movies/movie-detail/movie-detail.compone
 import { MovieEditComponent } from './movies/movie-edit/movie-edit.component';
 import { ActorListComponent } from './actors/actor-list/actor-list.component';
 import { ActorDetailComponent } from './actors/actor-detail/actor-detail.component';
+import { ActorEditComponent } from './actors/actor-edit/actor-edit.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ActorDetailComponent } from './actors/actor-detail/actor-detail.compone
     MovieDetailComponent,
     MovieEditComponent,
     ActorListComponent,
-    ActorDetailComponent
+    ActorDetailComponent,
+    ActorEditComponent
   ],
   imports: [
     BrowserModule,

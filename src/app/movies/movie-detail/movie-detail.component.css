@@ -118,3 +118,7 @@ a > button:hover {
     cursor: pointer;
     background-color: rgba(255, 160, 122, 0.791);
 }
+
+.default-image {
+    height: 300px;
+}

@@ -4,8 +4,8 @@
     <div class="flex-container">
        
         <div class="photo-container">
-                <img [src]="getMovieImageSource()">
-        </div>
+            <img [src]="movie.imageUrl" [ngClass]="{ 'default-image': isDefaultImage() }">
+        </div>        
 
 
         <div class="card-container">
