@@ -1,11 +1,17 @@
+<html>
+
 <body>
-<app-menu></app-menu>
 
-    
+    <div class="arm">
+        <img src="../assets/arm.png">
+    </div>
 
+    <div class="create-wrap">
         <a routerLink="/movies/create">
             <button class="create">+ ADD A MOVIE</button>   
-          </a> 
+        </a> 
+    </div>
+
 
         <div class="table-container">
 
@@ -16,8 +22,6 @@
                     <tr>
                         <th >Movie Title</th>
                         <th>Year</th>
-                        <th>Rating</th>
-                        <th>Director</th>
                         <th class="button-header"></th>
                         <th class="button-header"></th>
                     </tr> 
@@ -29,17 +33,15 @@
                     <tr *ngFor="let movie of movies">
                     <td>{{ movie.title }}</td>
                     <td>{{ movie.year }}</td>
-                    <td>{{ movie.rating}}</td>
-                    <td>{{ movie.director}}</td>
                     <td><a routerLink="/movies/{{movie.id}}">
-                        <button class="list-button">Movie Details</button></a>
+                        <button class="list-button">Details</button></a>
                     </td>
 
                     
 
                     <td>
                         <a routerLink="/movies/edit/{{ movie.id }}">
-                            <button class="list-button">Edit Movie</button></a>
+                            <button class="list-button">Edit</button></a>
                     </td>
                  
                     </tr>
@@ -49,3 +51,4 @@
 
         </div>
   </body>
+  </html>

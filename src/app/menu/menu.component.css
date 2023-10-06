@@ -1,17 +1,10 @@
 .navbar img {
-    height: 60px;
+    height: 65px;
     margin-left: 60px;
 } 
 
-body {
-    height: 125vh;
-    background-color: aquamarine;
-    background-size: cover;
-    font-family: sans-serif;
-}
-
 header {
-    background-color: rgb(251, 198, 246);
+    background-color: rgba(251, 198, 246, 0.262);
     position: fixed;
     top: 0;
     left: 0;
@@ -19,14 +12,9 @@ header {
     height: 80px;
     display: flex;
     align-items: center;
-    box-shadow: 0 0 25px 0 black;
+    box-shadow: 0 0 10px 0 rgb(249, 133, 231);
 }
 
-main {
-    color: white;
-    margin-top: 80px;
-    padding: 120px;
-}
 
 header * {
     display: inline;
@@ -49,13 +37,13 @@ header li a {
     margin: 15px;
     border-radius: 50px;
     color: #333;
-    background: rgba(174, 251, 225, 0.895);
+    background: rgba(251, 198, 246, 0.262);
     margin-bottom: 50px;
-    box-shadow: 0 3px 20px 0 #0000003b;
+    box-shadow: 0 3px 5px 0 #0000003b;
     width: 150px;
   }
   
   .nav-button:hover {
     cursor: pointer;
-    background-color: rgba(127, 255, 212, 0.795);
+    background-color: rgba(251, 198, 246, 0.358);
   }

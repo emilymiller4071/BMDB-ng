@@ -1,133 +1,56 @@
-
-body {
-    background-color: rgba(127, 255, 212, 0.462);
-    margin: 0; /* Remove default margin to fill the entire viewport */
-    padding: 0; /* Remove default padding */
-    overflow-y: scroll;
+img {
+    margin-top: 100px;
+    height: 300px;
 }
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-/* Reset some default styles */
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-html {
-    background-color:  rgba(255, 127, 227, 0.462);
-}
-
-body {
-    min-height: 100vh;
-    background-color: rgba(255, 127, 227, 0.462);
-    margin: 0;
-    padding: 0;
-    overflow-y: scroll;
-}
-
-header {
-    background: url('http://www.autodatz.com/wp-content/uploads/2017/05/Old-Car-Wallpapers-Hd-36-with-Old-Car-Wallpapers-Hd.jpg');
-    text-align: center;
-    width: 100%;
-    height: auto;
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-    overflow: hidden;
-    border-radius: 0 0 85% 85% / 30%;
-}
-
-header .overlay {
-    width: 100%;
-    height: 100%;
-    padding: 30px;
-    color: #a85cd769;
-    text-shadow: 1px 1px 1px #333;
-    background-image: linear-gradient(135deg, #9f05ff69 10%, #fd5e086b 100%);
-}
-
-h1 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 80px;
-    margin-bottom: 30px;
-}
-
-h3, p {
-    font-family: 'Open Sans', sans-serif;
+.create-wrap {
+    margin-top: 140px;
+    margin-left: 40px;
     margin-bottom: 30px;
 }
 
 button {
-    border: none;
+    border: 1px lightpink;
+    background-color:  rgba(249, 150, 249, 0.082);
     outline: none;
     padding: 10px 20px;
-    margin: 15px;
     border-radius: 50px;
     color: #333;
-    background: rgba(127, 255, 212, 0.637);
-    margin-bottom: 50px;
-    box-shadow: 0 3px 20px 0 #0000003b;
-    width: 150px;
+    font-size: small;
+    box-shadow: 0 1px 2px 0 #0000003b;
+    width: 140px;
 }
 
-button:hover {
-    cursor: pointer;
-    background-color: rgba(127, 255, 212, 0.795);
+.create:hover, .list-button:hover {
+    background-color: rgba(249, 150, 249, 0.164);
+    transform: scale(1.01);
 }
 
+.list-button {
+    width: 100px;
+    margin: 7px;
+}
+
+.table-container {
+    margin-left: 40px;
+    width: 600px;
+}
 table.table-striped {
     border-collapse: separate;
     border-spacing: 0;
-    border-radius: 60px 60px 0 0; /* Adjust the radius to control the roundness */
-}
-
-.header {
-    background-color: transparent; /* Make the header background transparent */
-    text-align: center; /* Center header content if needed */
-    padding: 20px; /* Add padding to header if needed */
-}
-
-
-.create{
-    display: inline-block;
-    outline: 0;
-    border:0;
-    cursor: pointer;
-    text-decoration: none;
-    position: relative;
-    color: #000;
-    background: rgba(237, 199, 30, 0.372);
-    line-height: 25px;
-    border-radius: 40px;
-    padding: 10px;
-    margin: 20px;
-    font-size: 20px;
-    font-weight: 600;
-    box-shadow: rgb(255, 198, 0) -2px -2px 0px 2px, rgb(246, 84, 174) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
-    transition: all 0.2s;
-}
-.create:hover{
-    box-shadow: rgb(246, 84, 174) -2px -2px 0px 2px, rgba(216, 131, 249, 0.923) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
-    transform: scale(1.01);
+    width: 100%;
+    color:rgba(0, 0, 0, 0.505)
 }
 
 .table-striped>tbody>tr:nth-child(odd)>td, 
 .table-striped>tbody>tr:nth-child(odd)>th {
-    background-color: rgba(232, 38, 219, 0.338);
+    background-color:  rgba(249, 150, 249, 0.082);
     }
 
 .table-striped>tbody>tr:nth-child(even)>td, 
 .table-striped>tbody>tr:nth-child(even)>th {
-    background-color: rgba(209, 38, 232, 0.501);
-}
+    background-color: rgba(249, 150, 249, 0.164);
 
-th {
-    background-color: rgba(143, 11, 195, 0.699);
-    border: none;
-    border-collapse: separate;
-    border-spacing: 0;
-    overflow: hidden;
 }
 
 th.button-header {
@@ -135,19 +58,3 @@ th.button-header {
     text-align: right;
 }
 
-
-.list-button {
-	border: none;
-	outline: none;
-	padding: 10px 5px;
-	border-radius: 50px;
-	color: #333;
-	background: rgba(127, 255, 212, 0.637);
-	box-shadow: 0 3px 20px 0 #0000003b;
-    width: 100px;
-    font-size: small;
-}
-button:hover{
-	cursor: pointer;
-    background-color: rgba(127, 255, 212, 0.795);
-}
