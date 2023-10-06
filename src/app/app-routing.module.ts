@@ -4,9 +4,11 @@ import { ActorCreateComponent } from './actors/actor-create/actor-create.compone
 import { ActorDetailComponent } from './actors/actor-detail/actor-detail.component';
 import { ActorEditComponent } from './actors/actor-edit/actor-edit.component';
 import { ActorListComponent } from './actors/actor-list/actor-list.component';
+import { CreditListComponent } from './credits/credit-list/credit-list.component';
 import { HomeComponent } from './home/home.component';
 import { MovieCreateComponent } from './movies/movie-create/movie-create.component';
 import { MovieDetailComponent } from './movies/movie-detail/movie-detail.component';
+import { MovieDisplayComponent } from './movies/movie-display/movie-display.component';
 import { MovieEditComponent } from './movies/movie-edit/movie-edit.component';
 import { MovieListComponent } from './movies/movie-list/movie-list.component';
 
@@ -15,12 +17,13 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'movies/create', component: MovieCreateComponent },
   { path: 'movies/list', component: MovieListComponent },
-  { path: 'movies/:id', component: MovieDetailComponent },
+  { path: 'movies/:id', component: MovieDisplayComponent },
   { path: 'movies/edit/:id', component: MovieEditComponent },
   { path: 'actors/create', component: ActorCreateComponent},
   { path: 'actors/list', component: ActorListComponent },
   { path: 'actors/:id', component: ActorDetailComponent},
-  { path: 'actors/edit/:id', component: ActorEditComponent}
+  { path: 'actors/edit/:id', component: ActorEditComponent},
+  { path: 'credits/list/:id', component: CreditListComponent},
 ];
 
 @NgModule({

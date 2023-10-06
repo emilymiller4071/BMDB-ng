@@ -28,7 +28,7 @@
                         <tr *ngFor="let actor of actors">
                         <td>{{ actor.firstName }} {{actor.lastName}}</td>
                         <td>{{ actor.gender }}</td>
-                        <td>{{ actor.birthDate}}</td>
+                        <td>{{ actor.birthDate | date:'MM-dd-yyyy' }}</td>
                         <td><a routerLink="/actors/{{actor.id}}">
                             <button class="list-button">Actor Details</button></a>
                         </td>

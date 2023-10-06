@@ -20,6 +20,10 @@ export class CreditService {
         return this.http.get(this.url + "/" + id) as Observable<Credit>;
     }
 
+    getByMovieId(id: number): Observable<Credit[]> {
+        return this.http.get(this.url + "/movie/" + id) as Observable<Credit[]>
+    }
+
     create(credit: Credit): Observable<Credit> {
         return this.http.post(this.url, credit) as Observable<Credit>;
     }

@@ -1,7 +1,9 @@
+
 <body>
-    <app-menu></app-menu>
+
 
     <div class="flex-container">
+
        
         <div class="photo-container">
             <img [src]="movie.imageUrl" [ngClass]="{ 'default-image': isDefaultImage() }">
@@ -25,7 +27,7 @@
                         </a>    
                         
                         <a><button type="button" (click)="delete()">Delete</button></a>
-                        <a><button type="button">Credits</button></a> 
+                        <a routerLink="/credits/list/{{movie.id}}"><button type="button">Credits</button></a> 
                     </div>    
 
                     </section>

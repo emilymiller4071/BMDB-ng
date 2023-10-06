@@ -1,0 +1,46 @@
+*{padding: 0; margin: 0; box-sizing: border-box;}
+body{
+	height: 100vh;
+	background-color: rgba(50, 192, 248, 0.453);
+    margin: 0; /* Remove default margin to fill the entire viewport */
+    padding: 0; /* Remove default padding */
+	overflow-y: scroll;
+}
+
+.container {
+    display: flex;
+    position: relative;
+  }
+  
+  .stationary-div {
+    flex: 1 1 auto; /*Make the div non-flexible and auto-sized */
+    width: 500px; /* Adjust the width as needed */
+    padding: 0px; /* Add spacing or styling as needed */
+    background-color: #f0f0f0; /* Add background color or styling as needed */
+    z-index: 2;
+    }
+  
+  .scrolling-container {
+    flex: 1; /* Allow the container to grow and take up remaining space */
+    overflow-y: auto; /* Enable vertical scrolling */
+    z-index: 2;    
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px; /* Add spacing or styling as needed */
+    /* You can set max-width or other styling as needed for the cards */
+  }
+  
+  .card {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    flex: 0 0 calc(33.333% - 20px); /* Adjust card width and spacing */
+  }
+  
+  /* Add more styles as needed for your cards, images, and buttons */
+  
