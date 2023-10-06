@@ -1,19 +1,9 @@
-/* Reset some default styles */
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-
-
-body {
-    min-height: 100vh;
-    background-color: rgba(255, 127, 227, 0.462);
-    margin: 0;
-    padding: 0;
-    overflow-y: scroll;
-}
-
 
 .flex-container {
     display: flex;
@@ -25,23 +15,31 @@ body {
 
 .card-container {
     display: flex;
-    flex: 6; /* Adjust the flex value to make it wider */
+    flex: 6; 
     margin-right: 250px;
-    height: 400px;
+    height: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: rgba(187, 145, 179, 0.091); /* Set background-color to transparent */
+    border-style:hidden;
 }
 
 .card-container,
 .photo-container {
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
+    margin-top: 140px;
+    height: 300px;
 }
 
 .photo-container {
     margin-left: 390px;
-    margin-right: 10px; /* Add a small gap between containers */
-    height: 360px; /* Ensure that the container is at least as tall as the image */
-    flex-grow: 1; /* Allow the container to grow vertically */
+    height: 300px; 
+    flex-grow: 1; 
 }
 
 img {
@@ -57,20 +55,54 @@ img {
     flex-direction: row;
 }
 
-a {
-    text-decoration: none;
-}
 
-a > button {
-    background-color: rgba(255, 160, 122, 0.575);
-    width: 125px;
-}
-
-a > button:hover {
+.list-button {
+    outline: 0;
+    width: 75px;
+    height: 30px;
+    margin: 15px;
+    grid-gap: 8px;
+    align-items: center;
+    background-color: #ff90e95f;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 4px;
     cursor: pointer;
-    background-color: rgba(255, 160, 122, 0.791);
+    display: inline-flex;
+    flex-shrink: 0;
+    font-size: 14px;
+    gap: 8px;
+    justify-content: center;
+    line-height: 1.5;
+    overflow: hidden;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: all .14s ease-out;
+    white-space: nowrap;
 }
+    
+.list-button:hover {
+    box-shadow: 4px 4px 0 #000;
+    transform: translate(-4px,-4px);
+}
+    
+.list-button:focus-visible {
+    outline-offset: 1px;
+}
+
 
 .default-image {
-    height: 300px;
+    height: 400px;
+}
+
+p {
+    margin: 20px;
+    color:rgba(0, 0, 0, 0.505)
+}
+h3 {
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 10px;
+    color:rgba(0, 0, 0, 0.646);
 }

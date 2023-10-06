@@ -1,12 +1,10 @@
 <body>
-
-<app-menu></app-menu>
    
     <div class="trans-box-container">
        
         <div class="trans-box">
 
-            <h3>Update Movie Details:</h3>
+            <h3>Update Actor Details:</h3>
             <div class="form-container">
 
                 <div class="form-group">
@@ -31,9 +29,9 @@
                 </div>
 
                 <div class="button-container">    
-                    <button type="button" (click)="update()">Save</button>
-                    <button type="button" (click)="delete()">Delete</button>
-                    <button routerLink="/actors/list">Cancel</button>
+                    <button type="button" class="list-button" (click)="update()">Save</button>
+                    <button type="button" class="list-button" (click)="delete()">Delete</button>
+                    <button type="button" class="list-button" routerLink="/actors/list">Cancel</button>
                 </div>
 
             </div>

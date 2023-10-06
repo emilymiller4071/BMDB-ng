@@ -19,7 +19,6 @@ import { ActorDetailComponent } from './actors/actor-detail/actor-detail.compone
 import { ActorEditComponent } from './actors/actor-edit/actor-edit.component';
 import { ActorCreateComponent } from './actors/actor-create/actor-create.component';
 import { CreditListComponent } from './credits/credit-list/credit-list.component';
-import { MovieDisplayComponent } from './movies/movie-display/movie-display.component';
 
 @NgModule({
   declarations: [
@@ -34,8 +33,7 @@ import { MovieDisplayComponent } from './movies/movie-display/movie-display.comp
     ActorDetailComponent,
     ActorEditComponent,
     ActorCreateComponent,
-    CreditListComponent,
-    MovieDisplayComponent
+    CreditListComponent
   ],
   imports: [
     BrowserModule,

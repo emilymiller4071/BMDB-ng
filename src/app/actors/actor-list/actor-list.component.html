@@ -1,11 +1,14 @@
-<body>
-    <app-menu></app-menu>
-    
+<body>  
+    <div class="container">
         
-    
-            <a routerLink="/actors/create">
+        <div class="left-column">
+            
+            <div class="create-wrap">
+                <a routerLink="/actors/create">
                 <button class="create">+ ADD ACTOR</button>   
-              </a> 
+                 </a>
+            </div>
+
     
             <div class="table-container">
     
@@ -15,8 +18,6 @@
     
                         <tr>
                             <th >Actor Name</th>
-                            <th>Gender</th>
-                            <th>Birthdate</th>
                             <th class="button-header"></th>
                             <th class="button-header"></th>
                         </tr> 
@@ -27,23 +28,28 @@
     
                         <tr *ngFor="let actor of actors">
                         <td>{{ actor.firstName }} {{actor.lastName}}</td>
-                        <td>{{ actor.gender }}</td>
-                        <td>{{ actor.birthDate | date:'MM-dd-yyyy' }}</td>
                         <td><a routerLink="/actors/{{actor.id}}">
-                            <button class="list-button">Actor Details</button></a>
+                            <button class="list-button">Details</button></a>
                         </td>
     
                         
     
                         <td>
                             <a routerLink="/actors/edit/{{ actor.id }}">
-                                <button class="list-button">Edit Actor</button></a>
+                                <button class="list-button">Edit</button></a>
                         </td>
                      
                         </tr>
     
                     </tbody>
                 </table> 
-    
+            </div>
+            </div>
+
+            <div class="right-column">
+                <div class="picture">
+                    <img src="../../../assets/vhs.png">
+                </div>
+            </div>    
             </div>
       </body>

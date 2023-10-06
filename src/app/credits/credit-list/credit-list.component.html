@@ -1,33 +1,42 @@
 <body>
-<app-menu></app-menu>
-<div class="container">
 
-    <div class="stationary-div">
-        <app-movie-detail></app-movie-detail>
+
+
+    <div class="create-wrap">
+        <a routerLink="/credits/create">
+        <button class="create">+ ADD A CREDIT</button>
+        </a>
     </div>
 
-    <div class="scrolling-container">
+        <div class="table-container">
 
-        <div class="card-container" *ngFor="let credit of credits">
 
-            <div class="card" >
-               
-                <div class="card-image">
-                    <img [src]="'../../assets/' + credit.actor.firstName + '_' + credit.actor.lastName + '.jpg'">
-                </div>
+            <table class="table-striped">
+                <thead>
+
+                    <tr>
+                        <th class="actor">Actor</th>
+                        <th class="role">Role</th>
+                        <th class="button-header"></th>
+                        <th class="button-header"></th>
+                    </tr>
                 
-                <div class="card-content">
-                    <h5>{{credit.actor.firstName}} {{credit.actor.lastName}}</h5>
-                    <p>{{credit.role}}</p>
-                    <a href="#" class="btn">Read More</a>
-                </div>
-            
-            </div>
+                </thead>
+                    
+                <tbody>
 
-        </div>
-
-    </div>
-
-</div>
-
-</body>
+                        <tr *ngFor="let credit of credits">
+                            <td class="actor">{{credit.actor.firstName}} {{credit.actor.lastName}}</td>
+                            <td class="role">{{credit.role}}</td>
+                            <td><a routerLink="/actors/{{credit.actor.id}}">
+                                <button class="list-button">Actor Details</button>
+                                </a></td>
+                            <td><a routerLink="/credits/edit/{{credit.id}}">
+                                <button class="list-button">Edit Role</button>
+                            </a></td>
+                        </tr>
+                    </tbody>
+                
+            </table>
+        </div>       
+ </body>

@@ -64,4 +64,9 @@ export class ActorDetailComponent implements OnInit {
   isDefaultImage(): boolean {
     return this.actor.imageUrl === '../../assets/default.png';
   }
+
+  delete() {
+    this.actorService.delete(this.id).subscribe(jsonResponse =>
+      this.router.navigateByUrl('actors/list'));
+  }
 }
