@@ -23,6 +23,8 @@
 .card {
     display: flex;
     flex-direction: column;
+    width: 500px;
+    margin-left: 20px;
     height: 100%;
     background-color: rgba(187, 145, 179, 0.091); /* Set background-color to transparent */
     border-style:hidden;
@@ -31,19 +33,18 @@
 .card-container,
 .photo-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-top: 140px;
     height: 300px;
 }
 
 .photo-container {
-    margin-left: 390px;
+    margin-left: 200px;
     height: 300px; 
     flex-grow: 1; 
 }
 
 img {
-    
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
@@ -53,6 +54,7 @@ img {
 .button-wrap {
     display: flex;
     flex-direction: row;
+    margin-left: 95px;
 }
 
 
@@ -96,8 +98,8 @@ img {
     height: 400px;
 }
 
-p {
-    margin: 20px;
+p, h5 {
+    margin-top: 10px;
     color:rgba(0, 0, 0, 0.505)
 }
 h3 {
@@ -106,3 +108,18 @@ h3 {
     margin-bottom: 10px;
     color:rgba(0, 0, 0, 0.646);
 }
+
+.name {
+    color:rgba(0, 0, 0, 0.587);
+    margin-left: 20px;
+}
+
+.played {
+    margin-left: 10px;
+}
+
+.actor-details {
+    margin-left: 40px;
+    margin-bottom: 15px;
+}
+

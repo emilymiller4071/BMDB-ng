@@ -3,7 +3,12 @@
     <div class="flex-container">
        
         <div class="photo-container">
-            <img [src]="movie.imageUrl" [ngClass]="{ 'default-image': isDefaultImage() }">
+           
+            
+                <img [src]="movie.imageUrl" [ngClass]="{ 'default-image': isDefaultImage() }">
+                <img [src]="actor.imageUrl" [ngClass]="{ 'default-image': isDefaultImage() }">
+            
+
         </div>
 
 
@@ -12,10 +17,12 @@
                 <div class="card large">
                     <section class="section dark">
                         <h3 class="strong">
-                        <strong>{{actor.firstName}} {{actor.lastName}}</strong>
+                        <strong>{{credit.role}}</strong>
                         </h3>
-                        <p>Gender : {{actor.gender}}</p>
-                        <p>Birthday : {{ actor.birthDate | date:'MM-dd-yyyy' }}</p>
+                        <p class="played">played by:</p>
+                        <h5 class="name"> {{credit.actor.firstName}} {{credit.actor.lastName}}</h5>
+                        <p class="actor-details">Gender : {{credit.actor.gender}}</p>
+                        <p class="actor-details">Birthday : {{ credit.actor.birthDate | date:'MM-dd-yyyy' }}</p>
                         
                     <div class="button-wrap">    
                         <a routerLink="/actors/edit/{{ actor.id }}">
@@ -23,7 +30,7 @@
                         </a>    
                         
                         <a><button type="button" class="list-button" (click)="delete()">Delete</button></a>
-                        <a><button type="button" class="list-button">Credits</button></a> 
+                        <a><button type="button" class="list-button" (click)="onBackClick()">Back</button></a>
                     </div>    
 
                     </section>

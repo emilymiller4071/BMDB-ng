@@ -4,6 +4,7 @@ import { ActorCreateComponent } from './actors/actor-create/actor-create.compone
 import { ActorDetailComponent } from './actors/actor-detail/actor-detail.component';
 import { ActorEditComponent } from './actors/actor-edit/actor-edit.component';
 import { ActorListComponent } from './actors/actor-list/actor-list.component';
+import { ActorRolesComponent } from './actors/actor-roles/actor-roles.component';
 import { CreditCreateComponent } from './credits/credit-create/credit-create.component';
 import { CreditDetailComponent } from './credits/credit-detail/credit-detail.component';
 import { CreditEditComponent } from './credits/credit-edit/credit-edit.component';
@@ -28,7 +29,8 @@ const routes: Routes = [
   { path: 'credits/list/:id', component: CreditListComponent},
   { path: 'credits/movies/:id', component: CreditCreateComponent},
   { path: 'credits/edit/:id', component: CreditEditComponent},
-  { path: 'credits/detail/:id', component: CreditDetailComponent}
+  { path: 'credits/detail/:id', component: CreditDetailComponent},
+  { path: 'credits/actor/:id', component: ActorRolesComponent}
 ];
 
 @NgModule({

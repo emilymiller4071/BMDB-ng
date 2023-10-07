@@ -22,6 +22,7 @@ import { CreditListComponent } from './credits/credit-list/credit-list.component
 import { CreditCreateComponent } from './credits/credit-create/credit-create.component';
 import { CreditEditComponent } from './credits/credit-edit/credit-edit.component';
 import { CreditDetailComponent } from './credits/credit-detail/credit-detail.component';
+import { ActorRolesComponent } from './actors/actor-roles/actor-roles.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { CreditDetailComponent } from './credits/credit-detail/credit-detail.com
     CreditListComponent,
     CreditCreateComponent,
     CreditEditComponent,
-    CreditDetailComponent
+    CreditDetailComponent,
+    ActorRolesComponent
   ],
   imports: [
     BrowserModule,

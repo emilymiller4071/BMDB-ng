@@ -3,6 +3,10 @@ import { Actor } from 'src/model/actor.class';
 import { ActorService } from 'src/app/service/actor.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DatePipe } from '@angular/common';
+import { Credit } from 'src/model/credit.class';
+import { CreditService } from 'src/app/service/credit.service';
+
+
 
 @Component({
   selector: 'app-actor-detail',
@@ -14,12 +18,15 @@ export class ActorDetailComponent implements OnInit {
   actor: Actor = new Actor();
   id: number = 0;
   actorImageLoaded: boolean = false;
+  credit: Credit = new Credit;
+  credits: Credit[] =[];
 
   constructor(
     private actorService: ActorService,
     private route: ActivatedRoute,
-    private router: Router, private datePipe: DatePipe
-  ) {}
+    private router: Router, private datePipe: DatePipe,
+    private creditService: CreditService) {}
+
 
   ngOnInit(): void {
     this.route.params.subscribe(params => this.id = params['id']);
@@ -69,4 +76,15 @@ export class ActorDetailComponent implements OnInit {
     this.actorService.delete(this.id).subscribe(jsonResponse =>
       this.router.navigateByUrl('actors/list'));
   }
+
+  getByActorId() {
+    this.route.params.subscribe(params => this.id = params['id']);
+    this.creditService.getByActorId(this.id).subscribe(jsonResponse => {
+      this.credits = jsonResponse as Credit[];
+
+      this.router.navigate([`/credits/actor/${this.id}`]);
+    }); 
+  }
+
+
 }
