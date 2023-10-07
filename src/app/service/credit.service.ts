@@ -28,8 +28,8 @@ export class CreditService {
         return this.http.post(this.url, credit) as Observable<Credit>;
     }
 
-    update(id: number): Observable<Credit> {
-        return this.http.put(this.url, id) as Observable<Credit>;
+    update(credit: Credit): Observable<Credit> {
+        return this.http.put(this.url, credit) as Observable<Credit>;
     }
 
     delete(id: number): Observable<Credit> {

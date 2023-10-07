@@ -25,6 +25,8 @@ export class MovieEditComponent implements OnInit{
     }
 
     update() {
+      this.movie.rating = this.movie.rating.toUpperCase();
+
       this.movieService.update(this.movie).subscribe(
         (updatedMovie: Movie) => {
           // Update the local movie object with the new values returned from the server

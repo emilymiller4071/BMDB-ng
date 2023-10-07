@@ -1,0 +1,35 @@
+<body>
+
+    <div class="flex-container">
+       
+        <div class="photo-container">
+            <img [src]="movie.imageUrl" [ngClass]="{ 'default-image': isDefaultImage() }">
+        </div>
+
+
+        <div class="card-container">
+            
+                <div class="card large">
+                    <section class="section dark">
+                        <h3 class="strong">
+                        <strong>{{actor.firstName}} {{actor.lastName}}</strong>
+                        </h3>
+                        <p>Gender : {{actor.gender}}</p>
+                        <p>Birthday : {{ actor.birthDate | date:'MM-dd-yyyy' }}</p>
+                        
+                    <div class="button-wrap">    
+                        <a routerLink="/actors/edit/{{ actor.id }}">
+                            <button type="button" class="list-button">Edit</button>
+                        </a>    
+                        
+                        <a><button type="button" class="list-button" (click)="delete()">Delete</button></a>
+                        <a><button type="button" class="list-button">Credits</button></a> 
+                    </div>    
+
+                    </section>
+                </div>
+            
+        </div>
+
+    </div>    
+</body>

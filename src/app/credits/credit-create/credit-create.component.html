@@ -1,0 +1,47 @@
+<body>
+   
+    <div class="trans-box-container">
+       
+        <div class="trans-box">
+
+            <h3>Enter New Credit Details:</h3>
+            <div class="form-container">
+
+                <div class="form-group">
+
+                    <h2>{{movie.title}}</h2>
+
+                </div>    
+                    
+                <div class="form-group">
+                    <label for="actorSelect">Select an Actor:</label>
+                    <select id="actorSelect" [(ngModel)]="selectedActorId" name="actorSelect">
+                    <option value="" disabled>select an actor</option>
+                    <option *ngFor="let actor of actors" [value]="actor.id">
+                        {{ actor.firstName}} {{actor.lastName}}
+                    </option>
+                    </select>
+                </div>   
+
+                <h6>If you do not see the actor in the list, click 'Add Actor'</h6>
+                
+                <div class="form-group">
+                    <label for="role">Role: </label>
+                    <input [(ngModel)]="credit.role" type="text" name="role" placeholder="enter role">
+                </div> 
+                
+
+                <div class="button-container">    
+                    <button class="list-button" (click)="create()">Save</button>
+                    <button class="list-button" routerLink="/credits/list">Cancel</button>
+                    <button class="list-button" routerLink="/actors/create">Add Actor</button>
+                    <button class="list-button" routerLink="/movies/create">Add Movie</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
