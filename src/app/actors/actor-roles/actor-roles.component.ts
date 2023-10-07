@@ -43,6 +43,15 @@ export class ActorRolesComponent implements OnInit{
       })
       }
 
-    
+      onCreateClick() {
+        this.route.params.subscribe(params => this.id = params['id']);
+
+        this.actorService.getById(this.id).subscribe(actorResponse => {
+          this.actor = actorResponse as Actor;
+
+          this.router.navigate([`/credits/create/actor/${this.id}`]);
+        })
+      } 
+      
     }
 

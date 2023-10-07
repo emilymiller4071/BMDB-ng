@@ -89,7 +89,7 @@ export class CreditListComponent implements OnInit{
       this.route.params.subscribe(params => this.id = params['id']);
       this.movieService.getById(this.id).subscribe( jsonResponse => {
         this.movie = jsonResponse as Movie;
-        this.router.navigate([`/credits/movies/${this.movie.id}`]);
+        this.router.navigate([`/credits/create/movies/${this.movie.id}`]);
       })
     }
    

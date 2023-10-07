@@ -19,10 +19,11 @@ import { ActorDetailComponent } from './actors/actor-detail/actor-detail.compone
 import { ActorEditComponent } from './actors/actor-edit/actor-edit.component';
 import { ActorCreateComponent } from './actors/actor-create/actor-create.component';
 import { CreditListComponent } from './credits/credit-list/credit-list.component';
-import { CreditCreateComponent } from './credits/credit-create/credit-create.component';
 import { CreditEditComponent } from './credits/credit-edit/credit-edit.component';
 import { CreditDetailComponent } from './credits/credit-detail/credit-detail.component';
 import { ActorRolesComponent } from './actors/actor-roles/actor-roles.component';
+import { CreditCreateActorComponent } from './credits/credit-create-actor/credit-create-actor.component';
+import { CreditCreateMovieComponent } from './credits/credit-create-movie/credit-create-movie.component';
 
 @NgModule({
   declarations: [
@@ -38,10 +39,11 @@ import { ActorRolesComponent } from './actors/actor-roles/actor-roles.component'
     ActorEditComponent,
     ActorCreateComponent,
     CreditListComponent,
-    CreditCreateComponent,
     CreditEditComponent,
     CreditDetailComponent,
-    ActorRolesComponent
+    ActorRolesComponent,
+    CreditCreateActorComponent,
+    CreditCreateMovieComponent
   ],
   imports: [
     BrowserModule,

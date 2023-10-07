@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Credit } from 'src/model/credit.class';
 import { CreditService } from 'src/app/service/credit.service';
 import { Actor } from 'src/model/actor.class';
@@ -6,16 +6,16 @@ import { ActorService } from 'src/app/service/actor.service';
 import { Movie } from 'src/model/movie.class';
 import { MovieService } from 'src/app/service/movie.service';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { Location } from '@angular/common';
 
 
 @Component({
-  selector: 'app-credit-create',
-  templateUrl: './credit-create.component.html',
-  styleUrls: ['./credit-create.component.css']
+  selector: 'app-credit-create-movie',
+  templateUrl: './credit-create-movie.component.html',
+  styleUrls: ['./credit-create-movie.component.css']
 })
-export class CreditCreateComponent {
-pageTitle: string = "Credit Create";
+export class CreditCreateMovieComponent implements OnInit{
+pageTitle: string = "Credit Create Movie";
 credit: Credit = new Credit();
 id: number = 0;
 movie: Movie = new Movie();
@@ -27,7 +27,8 @@ selectedMovieId: number = 0;
 
 constructor(private creditService: CreditService,
   private route: ActivatedRoute, private actorService: ActorService,
-  private movieService: MovieService ,private router: Router) {}
+  private movieService: MovieService ,private router: Router,
+  private location: Location) {}
 
 
   ngOnInit(): void {
@@ -67,5 +68,9 @@ constructor(private creditService: CreditService,
         });
       }
     });
+  }
+
+  onCancelClick() {
+    this.location.back();
   }
 }
