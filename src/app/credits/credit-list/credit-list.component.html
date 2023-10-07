@@ -1,10 +1,10 @@
 <body>
 
-
+    <div class="title-display"><h1>Credits for {{movie.title}}</h1></div>
 
     <div class="create-wrap">
-        <a routerLink="/credits/create">
-        <button class="create">+ ADD A CREDIT</button>
+        <a>
+        <button class="create" (click)="onCreateClick()">+ ADD A CREDIT</button>
         </a>
     </div>
 
@@ -19,6 +19,7 @@
                         <th class="role">Role</th>
                         <th class="button-header"></th>
                         <th class="button-header"></th>
+                        <th class="button-header"></th>
                     </tr>
                 
                 </thead>
@@ -31,6 +32,9 @@
                             <td><a routerLink="/actors/{{credit.actor.id}}">
                                 <button class="list-button">Actor Details</button>
                                 </a></td>
+                            <td><a routerLink="/credits/detail/{{credit.id}}">
+                                <button class="list-button">Credit Details</button>
+                            </a></td>                          
                             <td><a routerLink="/credits/edit/{{credit.id}}">
                                 <button class="list-button">Edit Role</button>
                             </a></td>

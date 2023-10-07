@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CreditService } from 'src/app/service/credit.service';
 import { Credit } from 'src/model/credit.class';
+import { Location } from '@angular/common';
 import { Movie } from 'src/model/movie.class';
 import { MovieService } from 'src/app/service/movie.service';
 import { Actor } from 'src/model/actor.class';
@@ -18,6 +19,7 @@ export class CreditListComponent implements OnInit{
   actor: Actor = new Actor();
   actors: Actor[] = [];
   credits: Credit[] = [];
+  credit: Credit = new Credit();
   id: number = 0;
   movieImageLoaded: boolean = false;
 
@@ -25,9 +27,15 @@ export class CreditListComponent implements OnInit{
     private router: Router,
     private creditService: CreditService,
     private movieService: MovieService,
-    private actorService: ActorService) {}
+    private actorService: ActorService, 
+    private location: Location) {}
 
     ngOnInit(): void {
+      this.route.params.subscribe(params => this.id = params['id']);
+      this.movieService.getById(this.id).subscribe( jsonResponse => {
+        this.movie = jsonResponse as Movie;
+      })
+
       this.route.params.subscribe(params => this.id = params['id']);
       this.creditService.getByMovieId(this.id).subscribe(
         jsonResponse => {
@@ -39,6 +47,7 @@ export class CreditListComponent implements OnInit{
           this.actors = jsonResponse as Actor[];
         }
       );
+      
     }
 
     loadMovieImage(): void {
@@ -75,4 +84,13 @@ export class CreditListComponent implements OnInit{
     isDefaultImage(): boolean {
       return !this.movieImageLoaded || this.movie.imageUrl === '../../assets/default.png';
     }
+
+    onCreateClick() {
+      this.route.params.subscribe(params => this.id = params['id']);
+      this.movieService.getById(this.id).subscribe( jsonResponse => {
+        this.movie = jsonResponse as Movie;
+        this.router.navigate([`/credits/movies/${this.movie.id}`]);
+      })
+    }
+   
   }
