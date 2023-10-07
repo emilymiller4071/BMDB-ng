@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Actor } from 'src/model/actor.class';
 import { ActorService } from 'src/app/service/actor.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-actor-edit',
@@ -15,7 +16,7 @@ export class ActorEditComponent implements OnInit{
 
   constructor(private actorService: ActorService,
     private route: ActivatedRoute,
-    private router: Router) { }
+    private router: Router, private location: Location) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => this.id = params['id']);
@@ -40,4 +41,7 @@ export class ActorEditComponent implements OnInit{
       this.router.navigateByUrl('actors/list'));
   }
 
+  onCancelClick() {
+    this.location.back();
+  }
 }

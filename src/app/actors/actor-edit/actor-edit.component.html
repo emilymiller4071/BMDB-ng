@@ -25,13 +25,13 @@
                 
                 <div class="form-group">
                     <label for="birthDate">Birthday: </label>
-                    <input [(ngModel)]="actor.birthDate" type="text" name="birthDate" [placeholder]="actor.birthDate">
+                    <input [(ngModel)]="actor.birthDate" type="date" name="birthDate" [placeholder]="actor.birthDate">
                 </div>
 
                 <div class="button-container">    
                     <button type="button" class="list-button" (click)="update()">Save</button>
                     <button type="button" class="list-button" (click)="delete()">Delete</button>
-                    <button type="button" class="list-button" routerLink="/actors/list">Cancel</button>
+                    <button type="button" class="list-button" (click)="onCancelClick()">Cancel</button>
                 </div>
 
             </div>

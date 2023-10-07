@@ -3,6 +3,7 @@ import { Actor } from 'src/model/actor.class';
 import { ActorService } from 'src/app/service/actor.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DatePipe } from '@angular/common';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-actor-create',
@@ -18,7 +19,8 @@ actor: Actor = new Actor();
 
 constructor(private actorService: ActorService,
   private route: ActivatedRoute, 
-  private router: Router, private datePipe: DatePipe) { }
+  private router: Router, private datePipe: DatePipe,
+  private location: Location) { }
 
 
 create() {
@@ -31,4 +33,7 @@ create() {
   );
 }
 
+onCancelClick() {
+  this.location.back();
+}
 }
