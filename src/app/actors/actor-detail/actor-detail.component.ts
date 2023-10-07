@@ -5,7 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { DatePipe } from '@angular/common';
 import { Credit } from 'src/model/credit.class';
 import { CreditService } from 'src/app/service/credit.service';
-
+import { Location } from '@angular/common';
 
 
 @Component({
@@ -25,7 +25,7 @@ export class ActorDetailComponent implements OnInit {
     private actorService: ActorService,
     private route: ActivatedRoute,
     private router: Router, private datePipe: DatePipe,
-    private creditService: CreditService) {}
+    private creditService: CreditService, private location: Location) {}
 
 
   ngOnInit(): void {
@@ -86,5 +86,7 @@ export class ActorDetailComponent implements OnInit {
     }); 
   }
 
-
+  onBackClick() {
+    this.location.back();
+  }
 }

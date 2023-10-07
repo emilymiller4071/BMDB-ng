@@ -7,6 +7,7 @@ import { Credit } from 'src/model/credit.class';
 import { CreditService } from 'src/app/service/credit.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { throwError } from 'rxjs';
 
 
 
@@ -31,8 +32,17 @@ export class ActorRolesComponent implements OnInit{
     private location: Location) {}
 
     ngOnInit(): void {
-     
+     this.route.params.subscribe(params => this.id = params['id']);
+
+
+     this.actorService.getById(this.id).subscribe(actorResponse => {
+      this.actor = actorResponse as Actor;
+
+      this.creditService.getByActorId(this.actor.id).subscribe(creditResponse => {
+          this.credits = creditResponse as Credit[]; })
+      })
       }
-      
+
+    
     }
 

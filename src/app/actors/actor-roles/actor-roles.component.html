@@ -1,1 +1,46 @@
-<p>actor-roles works!</p>
+<body>
+
+    <div class="title-display"><h1>Roles for {{actor.firstName}} {{actor.lastName}}</h1></div>
+
+    <div class="create-wrap">
+        <a>
+        <button class="create">+ ADD A CREDIT</button>
+        </a>
+    </div>
+
+        <div class="table-container">
+
+
+            <table class="table-striped">
+                <thead>
+
+                    <tr>
+                        <th class="title">Title</th>
+                        <th class="role">Role</th>
+                        <th class="button-header"></th>
+                        <th class="button-header"></th>
+                        <th class="button-header"></th>
+                    </tr>
+                
+                </thead>
+                    
+                <tbody>
+
+                        <tr *ngFor="let credit of credits">
+                            <td class="movie">{{credit.movie.title}}</td>
+                            <td class="role">{{credit.role}}</td>
+                            <td><a routerLink="/actors/{{credit.actor.id}}">
+                                <button class="list-button">Actor Details</button>
+                                </a></td>
+                            <td><a routerLink="/credits/detail/{{credit.id}}">
+                                <button class="list-button">Credit Details</button>
+                            </a></td>                          
+                            <td><a routerLink="/credits/edit/{{credit.id}}">
+                                <button class="list-button">Edit Role</button>
+                            </a></td>
+                        </tr>
+                    </tbody>
+                
+            </table>
+        </div>       
+ </body>
