@@ -26,10 +26,13 @@
                         
                     <div class="button-wrap">    
                         <a routerLink="/actors/edit/{{ actor.id }}">
-                            <button type="button" class="list-button">Edit</button>
+                            <button type="button" class="list-button">Edit Actor</button>
                         </a>    
                         
-                        <a><button type="button" class="list-button" (click)="delete()">Delete</button></a>
+                        <a routerLink="/credits/edit/{{credit.id}}">
+                            <button type="button" class="list-button">Edit Role</button>
+                        </a>
+                        <a><button type="button" class="list-button" (click)="delete()">Delete Role</button></a>
                         <a><button type="button" class="list-button" (click)="onBackClick()">Back</button></a>
                     </div>    
 

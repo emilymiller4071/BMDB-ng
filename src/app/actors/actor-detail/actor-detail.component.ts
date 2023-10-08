@@ -20,6 +20,7 @@ export class ActorDetailComponent implements OnInit {
   actorImageLoaded: boolean = false;
   credit: Credit = new Credit;
   credits: Credit[] =[];
+  errorMessage: string = "";
 
   constructor(
     private actorService: ActorService,
@@ -79,12 +80,24 @@ export class ActorDetailComponent implements OnInit {
 
   getByActorId() {
     this.route.params.subscribe(params => this.id = params['id']);
-    this.creditService.getByActorId(this.id).subscribe(jsonResponse => {
-      this.credits = jsonResponse as Credit[];
-
-      this.router.navigate([`/credits/actor/${this.id}`]);
-    }); 
+  
+    this.creditService.getByActorId(this.id).subscribe(
+      jsonResponse => {
+        this.credits = jsonResponse as Credit[];
+        this.errorMessage = ''; 
+  
+        this.router.navigate([`/credits/actor/${this.actor.id}`]);
+      },
+      error => {
+        if (error.status === 404) {
+          this.errorMessage = '** NO ROLES FOUND FOR THIS ACTOR **';
+        } else {
+          this.errorMessage = 'An error occurred while fetching roles.';
+        }
+      }
+    );
   }
+  
 
   onBackClick() {
     this.location.back();

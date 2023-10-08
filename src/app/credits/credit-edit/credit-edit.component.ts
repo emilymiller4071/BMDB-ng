@@ -38,7 +38,7 @@ export class CreditEditComponent implements OnInit{
     this.route.params.subscribe(params => this.id = params['id']);
     this.creditService.update(this.credit).subscribe(jsonResponse => {
       this.credit = jsonResponse as Credit;
-      this.router.navigateByUrl('/movies/list');
+      this.location.back();
     })
   }
 

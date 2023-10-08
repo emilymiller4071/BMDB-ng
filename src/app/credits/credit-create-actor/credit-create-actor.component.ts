@@ -66,7 +66,7 @@ export class CreditCreateActorComponent implements OnInit{
             this.creditService.create(this.credit).subscribe(creditResponse => {
               this.credit = creditResponse as Credit;
 
-              this.router.navigateByUrl(`credits/list/${this.credit.actor.id}`)
+              this.location.back();
             })
           })
         }

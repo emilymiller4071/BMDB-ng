@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Movie } from 'src/model/movie.class';
 import { MovieService } from 'src/app/service/movie.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-movie-edit',
@@ -16,7 +16,7 @@ export class MovieEditComponent implements OnInit{
 
   constructor(private movieService: MovieService,
     private route: ActivatedRoute,
-    private router: Router) {}
+    private router: Router, private location: Location) {}
 
     ngOnInit(): void {
       this.route.params.subscribe(params => this.id = params['id']);

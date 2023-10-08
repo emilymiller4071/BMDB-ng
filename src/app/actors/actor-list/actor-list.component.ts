@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ActorService } from 'src/app/service/actor.service';
 import { Actor } from 'src/model/actor.class';
+import { Location } from '@angular/common';
 
 
 
@@ -18,7 +19,7 @@ export class ActorListComponent implements OnInit{
 
   constructor(private actorService: ActorService,
     private route: ActivatedRoute,
-    private router: Router) {
+    private router: Router, private location: Location) {
 
       
     }

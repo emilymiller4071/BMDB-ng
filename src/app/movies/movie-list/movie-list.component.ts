@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MovieService } from 'src/app/service/movie.service';
 import { Movie } from 'src/model/movie.class';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-movie-list',
@@ -18,7 +19,7 @@ export class MovieListComponent implements OnInit{
 
   constructor(private movieService: MovieService,
     private route: ActivatedRoute,
-    private router: Router) {
+    private router: Router, private location: Location) {
   }
   ngOnInit() {
     // subscribe to the list of movies we get from the get request

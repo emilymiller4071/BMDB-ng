@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MovieService } from 'src/app/service/movie.service';
 import { Movie } from 'src/model/movie.class';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-movie-create',
@@ -16,7 +17,7 @@ export class MovieCreateComponent {
 
   constructor(private movieService: MovieService,
     private router: Router,
-    private route: ActivatedRoute) {}
+    private route: ActivatedRoute, private location: Location) {}
 
 
     create() {

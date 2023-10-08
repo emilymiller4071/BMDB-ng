@@ -7,7 +7,6 @@ import { Credit } from 'src/model/credit.class';
 import { CreditService } from 'src/app/service/credit.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
-import { throwError } from 'rxjs';
 
 
 
