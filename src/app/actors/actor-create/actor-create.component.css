@@ -101,3 +101,9 @@ h3 {
 .list-button:focus-visible {
     outline-offset: 1px;
 }
+
+.error-message {
+    font-size: medium;
+    color: rgb(239, 103, 149);
+    margin-left: 25px;
+}

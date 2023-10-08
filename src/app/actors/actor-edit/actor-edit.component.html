@@ -28,6 +28,10 @@
                     <input [(ngModel)]="actor.birthDate" type="date" name="birthDate" [placeholder]="actor.birthDate">
                 </div>
 
+                <div *ngIf="errorMessage" class="error-message">
+                    {{errorMessage}}
+                </div>
+
                 <div class="button-container">    
                     <button type="button" class="list-button" (click)="update()">Save</button>
                     <button type="button" class="list-button" (click)="delete()">Delete</button>

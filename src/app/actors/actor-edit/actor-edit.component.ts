@@ -13,6 +13,7 @@ export class ActorEditComponent implements OnInit{
   pageTitle: string = "Actor Edit";
   actor: Actor = new Actor;
   id: number = 0;
+  errorMessage: string = '';
 
   constructor(private actorService: ActorService,
     private route: ActivatedRoute,
@@ -32,6 +33,11 @@ export class ActorEditComponent implements OnInit{
         this.actor = updatedActor;
         // Redirect to movie detail page with updated movie object
         this.router.navigate([`/actors/${this.actor.id}`]);
+      },
+      error => {
+        if (error.status === 500) {
+          this.errorMessage = 'THERE WAS AN ISSUE UPDATING THIS ACTOR';
+        }
       }
     );
   }

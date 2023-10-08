@@ -13,7 +13,7 @@ import { Location } from '@angular/common';
 export class ActorCreateComponent {
 pageTitle: string = "Actor Create";
 actor: Actor = new Actor();
-
+errorMessage: string = '';
 
 
 
@@ -29,8 +29,16 @@ create() {
   this.actorService.create(this.actor).subscribe(jsonResponse => {
       this.actor = jsonResponse as Actor;
       this.router.navigate(['/actors/list']);
+    },
+    (errorResponse) => {
+      if (errorResponse.status === 409) {
+        this.errorMessage = 'ACTOR ALREADY EXISTS';
+      } else {
+        this.errorMessage = 'AN ERROR OCCURRED WHILE CREATING ACTOR';
+      }
     }
-  );
+  
+    );
 }
 
 onCancelClick() {
