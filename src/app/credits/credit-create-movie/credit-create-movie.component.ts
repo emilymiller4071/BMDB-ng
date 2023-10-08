@@ -24,6 +24,7 @@ actors: Actor[] = [];
 selectedActorId: number = 0;
 movies: Movie[] = [];
 selectedMovieId: number = 0;
+errorMessage: string = '';
 
 constructor(private creditService: CreditService,
   private route: ActivatedRoute, private actorService: ActorService,
@@ -64,7 +65,15 @@ constructor(private creditService: CreditService,
   
             // After successfully creating the credit, navigate to the credits list
             this.router.navigateByUrl(`/credits/list/${this.credit.movie.id}`);
-          });
+          },
+          error => {
+            if (error.status === 500) {
+              this.errorMessage = 'ERROR. CREDIT MAY ALREADY EXIST.'
+            } else {
+              this.errorMessage = 'AN ERROR OCCURED WHILE CREATING CREDIT'
+            }
+          }
+          );
         });
       }
     });

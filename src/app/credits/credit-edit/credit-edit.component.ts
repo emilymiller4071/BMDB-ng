@@ -21,6 +21,7 @@ export class CreditEditComponent implements OnInit{
   actor: Actor = new Actor();
   movie: Movie = new Movie();
   id: number = 0;
+  errorMessage: string = '';
   
   constructor(private creditService: CreditService,
     private movieService: MovieService, private actorService: ActorService,
@@ -39,6 +40,11 @@ export class CreditEditComponent implements OnInit{
     this.creditService.update(this.credit).subscribe(jsonResponse => {
       this.credit = jsonResponse as Credit;
       this.location.back();
+    },
+    error => {
+      if (error.status === 500) {
+        this.errorMessage = 'ERROR. CREDIT MAY ALREADY EXIST.'
+      }
     })
   }
 

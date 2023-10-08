@@ -30,6 +30,9 @@
                     <input [(ngModel)]="credit.role" type="text" name="role" placeholder="enter role">
                 </div> 
                 
+                <div *ngIf="errorMessage" class="error-message">
+                    {{errorMessage}}
+                </div>
 
                 <div class="button-container">    
                     <button class="list-button" (click)="create()">Save</button>

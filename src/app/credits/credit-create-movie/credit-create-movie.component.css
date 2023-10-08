@@ -112,3 +112,8 @@ h6 {
     outline-offset: 1px;
 }
 
+.error-message {
+    font-size: medium;
+    color: rgb(239, 103, 149);
+    margin-left: 70px;
+}

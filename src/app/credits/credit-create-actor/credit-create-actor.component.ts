@@ -24,6 +24,7 @@ export class CreditCreateActorComponent implements OnInit{
   movie: Movie = new Movie();
   id: number = 0;
   selectedMovieId: number = 0;
+  errorMessage: string = '';
 
   constructor(private creditService: CreditService,
     private movieService: MovieService, private actorService: ActorService,
@@ -67,7 +68,15 @@ export class CreditCreateActorComponent implements OnInit{
               this.credit = creditResponse as Credit;
 
               this.location.back();
-            })
+            },
+            (errorResponse) => {
+              if (errorResponse.status === 500) {
+                this.errorMessage = 'ERROR. CREDIT MAY ALREADY EXIST';
+              } else {
+                this.errorMessage = 'AN ERROR OCCURRED WHILE CREATING CREDIT';
+              }
+            }
+            )
           })
         }
       })
