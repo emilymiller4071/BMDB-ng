@@ -13,6 +13,7 @@ export class MovieEditComponent implements OnInit{
   pageTitle: string = "Movie Edit";
   movie: Movie = new Movie();
   id: number = 0;
+  errorMessage: string = '';
 
   constructor(private movieService: MovieService,
     private route: ActivatedRoute,
@@ -33,6 +34,11 @@ export class MovieEditComponent implements OnInit{
           this.movie = updatedMovie;
           // Redirect to movie detail page with updated movie object
           this.router.navigate([`/movies/${this.movie.id}`]);
+        },
+        error => {
+          if (error) {
+            this.errorMessage = 'THERE WAS AN ERROR UPDATING THIS MOVIE'
+          }
         }
       );
     }

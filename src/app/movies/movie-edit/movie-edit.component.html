@@ -28,6 +28,10 @@
                     <input [(ngModel)]="movie.director" type="text" name="director" [placeholder]="movie.director">
                 </div>
 
+                <div *ngIf="errorMessage" class="error-message">
+                    {{errorMessage}}
+                </div>
+                
                 <div class="button-container">    
                     <button type="button" class="list-button" (click)="update()">Save</button>
                     <button type="button" class="list-button" (click)="delete()">Delete</button>

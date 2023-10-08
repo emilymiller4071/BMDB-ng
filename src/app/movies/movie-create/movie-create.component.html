@@ -28,6 +28,10 @@
                     <input [(ngModel)]="movie.director" type="text" name="director" placeholder="enter director">
                 </div>
 
+                <div *ngIf="errorMessage" class="error-message">
+                    {{errorMessage}}
+                </div>
+                
                 <div class="button-container">    
                     <button class="list-button" (click)="create()">Save</button>
                     <button class="list-button" routerLink="/movies/list">Cancel</button>
