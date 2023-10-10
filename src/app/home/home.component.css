@@ -2,7 +2,7 @@
 	margin-top: 85px !important;
 	position: relative;
 	width: 1000px; /* Set the width of the container */
-	max-width: 1200px; /* Optionally, set a maximum width */
+	max-width: 1200px; 
 	margin: auto;  /* Center the container horizontally */ 
   }
   
@@ -17,15 +17,15 @@
 	left: 50%; /* Position it in the middle horizontally */
 	transform: translate(-50%, -50%); /* Center it precisely */
 	background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
-	color: white; /* Text color */
+	color: white; 
 	padding: 20px; /* Add some padding to the text */
-	text-align: center; /* Center-align the text */
+	text-align: center; 
   }
   
   .overlay-text h1 {
-	font-size: 36px; /* Customize the heading size */
+	font-size: 36px; 
   }
   
   .overlay-text p {
-	font-size: 18px; /* Customize the paragraph size */
+	font-size: 18px;
   }

@@ -47,4 +47,8 @@ export class MovieEditComponent implements OnInit{
       this.movieService.delete(this.id).subscribe( jsonResponse =>
         this.router.navigateByUrl('movies/list'));
     }
+
+    onCancelClick() {
+      this.location.back();
+    }
 }

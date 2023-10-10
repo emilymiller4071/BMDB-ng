@@ -31,11 +31,11 @@
                 <div *ngIf="errorMessage" class="error-message">
                     {{errorMessage}}
                 </div>
-                
+
                 <div class="button-container">    
                     <button type="button" class="list-button" (click)="update()">Save</button>
                     <button type="button" class="list-button" (click)="delete()">Delete</button>
-                    <button type="button" class="list-button" routerLink="/movies/list">Cancel</button>
+                    <button type="button" class="list-button" (click)="onCancelClick()">Cancel</button>
                 </div>
 
             </div>

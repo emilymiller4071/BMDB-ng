@@ -32,7 +32,7 @@ export class MovieCreateComponent {
       this.movieService.create(this.movie).subscribe(jsonResponse => {
         this.movie = jsonResponse as Movie;
   
-        // Trigger route refresh to reload the movies/list page
+        
         this.router.navigate(['/movies/list']); 
       },
       error => {

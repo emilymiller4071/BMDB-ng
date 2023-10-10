@@ -75,8 +75,7 @@ export class CreditCreateActorComponent implements OnInit{
               } else {
                 this.errorMessage = 'AN ERROR OCCURRED WHILE CREATING CREDIT';
               }
-            }
-            )
+            })
           })
         }
       })

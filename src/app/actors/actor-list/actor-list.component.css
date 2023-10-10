@@ -58,10 +58,10 @@ th.button-header {
   
   .right-column {
     flex-basis: 3; /* Fixed width for the right column */
-    margin-left: 50px; /* Adjust the margin as needed */
+    margin-left: 50px; /* Adjust the margin */
   }
   
-  /* Additional styles for each column */
+
   .left-column .create-wrap {
     margin-bottom: 20px; /* Add margin between "Create" button and table */
   }

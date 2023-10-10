@@ -29,9 +29,9 @@ export class ActorEditComponent implements OnInit{
   update() {
     this.actorService.update(this.actor).subscribe(
       (updatedActor: Actor) => {
-        // Update the local movie object with the new values returned from the server
+        // Update the local actor object with the new values returned from the server
         this.actor = updatedActor;
-        // Redirect to movie detail page with updated movie object
+        // Redirect to actor detail page with updated movie object
         this.router.navigate([`/actors/${this.actor.id}`]);
       },
       error => {
