@@ -1,9 +1,31 @@
-body {
-	margin-top: 140px;
-	margin-left: 40px;
-}
-
-body img {
-	height: 100px;
-}	
-
+.image-container {
+	margin-top: 85px !important;
+	position: relative;
+	width: 1000px; /* Set the width of the container */
+	max-width: 1200px; /* Optionally, set a maximum width */
+	margin: auto;  /* Center the container horizontally */ 
+  }
+  
+  .image-container img {
+	width: 100%; /* Make the image fill the container */
+	display: block;
+  }
+  
+  .overlay-text {
+	position: absolute;
+	top: 50%; /* Position it in the middle vertically */
+	left: 50%; /* Position it in the middle horizontally */
+	transform: translate(-50%, -50%); /* Center it precisely */
+	background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+	color: white; /* Text color */
+	padding: 20px; /* Add some padding to the text */
+	text-align: center; /* Center-align the text */
+  }
+  
+  .overlay-text h1 {
+	font-size: 36px; /* Customize the heading size */
+  }
+  
+  .overlay-text p {
+	font-size: 18px; /* Customize the paragraph size */
+  }

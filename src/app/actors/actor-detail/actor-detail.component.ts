@@ -75,7 +75,12 @@ export class ActorDetailComponent implements OnInit {
 
   delete() {
     this.actorService.delete(this.id).subscribe(jsonResponse =>
-      this.router.navigateByUrl('actors/list'));
+      this.router.navigateByUrl('actors/list'),
+      error => {
+        if (error) {
+          this.errorMessage = 'THERE WAS AN ERROR DELETING THIS ACTOR'
+        }
+      });
   }
 
   getByActorId() {
